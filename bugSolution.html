@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text will disappear if JavaScript fails to execute.
+  </div>
+  <script>
+    const myDiv = document.getElementById('myDiv');
+    if (myDiv) {
+      myDiv.innerHTML = 'This text will replace the previous content.';
+    } else {
+      console.error("Element 'myDiv' not found.");
+      // Or other error handling, e.g., creating the element if it doesn't exist.
+    }
+  </script>
+</body>
+</html>
