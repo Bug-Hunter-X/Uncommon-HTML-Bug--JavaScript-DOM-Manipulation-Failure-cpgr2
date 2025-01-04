@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text will disappear if JavaScript fails to execute.
+  </div>
+  <script>
+    // The following line causes an error if there's no element with the ID 'myDiv'
+    document.getElementById('myDiv').innerHTML = 'This text will replace the previous content.';
+  </script>
+</body>
+</html>
